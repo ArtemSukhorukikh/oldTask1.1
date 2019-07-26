@@ -1,7 +1,8 @@
 <?php
-function declOfNum($number,array $fields){
+function declOfNum($number,array $fields,$shownumber){
     $resultString = "";
-    $resultString = $resultString.$number;
+    if ($shownumber == true)
+        $resultString = $resultString.$number;
     if($number %10 == 0 || ($number % 10 >= 5 && $number % 10 <= 9))
         $resultString = $resultString.$fields[2];
     elseif ($number %10 == 1)
